@@ -5,10 +5,6 @@
  * 
  * @date 15.01.2019 14:35:39
  * 
- * @todo 
- * 1. Create Main Form.
- * 2. Add iTextSharp pdf library (https://github.com/itext/itextsharp).
- * 
  * @bug No known bugs.
  */
 

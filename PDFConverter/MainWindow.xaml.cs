@@ -1,12 +1,14 @@
 ﻿/*!
- * \file MainWindow.xaml.cs
+ * @file MainWindow.xaml.cs
  * 
- * \author Dmitrii Leliuhin dleliuhin@mail.ru
+ * @author Dmitrii Leliuhin dleliuhin@mail.ru
  * 
- * \date 15.01.2019 14:35:39
+ * @date 15.01.2019 14:35:39
  * 
- * \bug No known bugs.
+ * @todo 
+ * 1. Create Main Form.
  * 
+ * @bug No known bugs.
  */
 
 using System;
@@ -24,6 +26,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+
 namespace PDFConverter
 {
     /*! \class MainWindow
@@ -35,6 +41,19 @@ namespace PDFConverter
         public MainWindow()
         {
             InitializeComponent();
+
+            var projectDirectory = Environment.CurrentDirectory;
+            var exportFolder = System.IO.Directory.GetParent(projectDirectory).Parent.FullName;
+            var exportFile = System.IO.Path.Combine(exportFolder, "Demo.pdf");
+
+            using (var writer = new PdfWriter(exportFile))
+            {
+                using (var pdf = new PdfDocument(writer))
+                {
+                    var doc = new Document(pdf);
+                    doc.Add(new iText.Layout.Element.Paragraph("Team Foxcatcher"));
+                }
+            }
         }
     }
 }

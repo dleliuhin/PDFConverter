@@ -1,9 +1,31 @@
-﻿<Application x:Class="PDFConverter.App"
+﻿<!-- 
+    @file App.xaml
+    @author Dmitrii Leliuhin dleliuhin@mail.ru
+    @date 15.01.2019 14:35:39
+    -->
+    
+<Application x:Class="PDFConverter.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:PDFConverter"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
+        <!--Circle Button Template.-->
+        <Style x:Key="CircleButtonTemplate" TargetType="Button">
+            <Setter Property="Background" Value="DodgerBlue" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 </Application>
