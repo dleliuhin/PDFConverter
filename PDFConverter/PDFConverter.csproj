@@ -71,6 +71,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -83,6 +85,7 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -166,6 +169,40 @@
   <ItemGroup>
     <Resource Include="images\convert_static.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\about.ico" />
+    <Resource Include="images\arrow.png" />
+    <Resource Include="images\canva-pdf-file-icon-MAB7k08sW-g.png" />
+    <Resource Include="images\CD_ROM.png" />
+    <Resource Include="images\clear.png" />
+    <Resource Include="images\disk.png" />
+    <Resource Include="images\diskdrive.png" />
+    <Resource Include="images\double_arrow.png" />
+    <Resource Include="images\File-512.png" />
+    <Resource Include="images\file.png" />
+    <Resource Include="images\file_manager.ico" />
+    <Resource Include="images\folder-closed.png" />
+    <Resource Include="images\folder-open.png" />
+    <Resource Include="images\folder.png" />
+    <Resource Include="images\group_or_user.png" />
+    <Resource Include="images\left_arrow.png" />
+    <Resource Include="images\monitor.ico" />
+    <Resource Include="images\MyComputer.png" />
+    <Resource Include="images\new_folder.ico" />
+    <Resource Include="images\privilege.png" />
+    <Resource Include="images\privilege_manager.ico" />
+    <Resource Include="images\process.png" />
+    <Resource Include="images\process_manager.ico" />
+    <Resource Include="images\property.ico" />
+    <Resource Include="images\recent.png" />
+    <Resource Include="images\right_arrow.png" />
+    <Resource Include="images\save.png" />
+    <Resource Include="images\start_monitor.png" />
+    <Resource Include="images\stop_monitor.png" />
+    <Resource Include="images\thread.png" />
+    <Resource Include="images\thread_manager.ico" />
+    <Resource Include="images\up_arrow.png" />
+    <Resource Include="images\u_pan.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
