@@ -1,0 +1,36 @@
+﻿<!-- 
+    @file FilterToggleButton.xaml
+    @author Dmitrii Leliuhin dleliuhin@mail.ru
+    @date 01.02.2019 2:51:44
+    -->
+
+<UserControl x:Class="PDFConverter.FilterToggleButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PDFConverter"
+             mc:Ignorable="d" Height="37.71" Width="224">
+
+    <UniformGrid x:Name="Filter"
+        Rows="1"
+        Columns="6"
+        Margin="1,1,1,1">
+
+        <ToggleButton x:Name="PdfToggleButton"
+                      Content=".pdf" 
+                      VerticalAlignment="Stretch"/>
+        <ToggleButton x:Name="DocToggleButton"
+                      Content=".doc" />
+        <ToggleButton x:Name="PptToggleButton"
+            Content=".ppt" />
+        <ToggleButton x:Name="HtmlToggleButton"
+            Content=".html" />
+        <ToggleButton x:Name="JpgToggleButton"
+            Content=".jpg" />
+        <ToggleButton x:Name="PngToggleButton"
+            Content=".png" />
+
+    </UniformGrid>
+    
+</UserControl>
