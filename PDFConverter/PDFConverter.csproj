@@ -92,6 +92,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ControlSources\sideToggleButton.xaml.cs">
+      <DependentUpon>sideToggleButton.xaml</DependentUpon>
+    </Compile>
     <Page Include="ControlSources\ConvertButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -136,10 +139,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlSources\previewSidebar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlSources\sideToggleButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlSources\ModeToggleButton.xaml.cs">
       <DependentUpon>ModeToggleButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSources\previewSidebar.xaml.cs">
+      <DependentUpon>previewSidebar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
