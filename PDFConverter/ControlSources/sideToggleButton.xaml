@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="PDFConverter.sideToggleButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PDFConverter"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="50">
+
+    <ToggleButton
+        x:Name="sidebarButton"
+        Margin="0" 
+        Background="{x:Null}"
+        MouseLeftButtonDown="sidebarButton_MouseLeftButtonDown">
+        <Image
+            Name="sideImage"
+            Source="../images/double_arrow.png" 
+            Stretch="Fill" />
+    </ToggleButton>
+</UserControl>
