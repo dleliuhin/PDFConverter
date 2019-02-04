@@ -1,6 +1,10 @@
 ## Ignore Visual Studio temporary files, 
 ## debug and build results.
 
+# Ignore other projects folders
+PDFConverter/
+WinFormsPDFConverter/
+
 # PDFConverter project Doc folder
 Documentation/
 Demo.pdf
