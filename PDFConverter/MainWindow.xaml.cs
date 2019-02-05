@@ -15,7 +15,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -25,6 +24,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 using iText.Kernel.Pdf;
 using iText.Layout;
@@ -53,6 +53,36 @@ namespace PDFConverter
                     var doc = new Document(pdf);
                     doc.Add(new iText.Layout.Element.Paragraph("Team Foxcatcher"));
                 }
+            }
+        }
+
+        private void btnLeftMenuHide_Click(object sender, RoutedEventArgs e)
+        {
+            ShowHideMenu("sbHideLeftMenu", btnLeftMenuHide, btnLeftMenuShow, pnlLeftMenu);
+        }
+
+        private void btnLeftMenuShow_Click(object sender, RoutedEventArgs e)
+        {
+            ShowHideMenu("sbShowLeftMenu", btnLeftMenuHide, btnLeftMenuShow, pnlLeftMenu);
+        }
+
+        private void ShowHideMenu(string Storyboard, Button btnHide, Button btnShow, StackPanel pnl)
+        {
+            Storyboard sb = Resources[Storyboard] as Storyboard;
+            sb.Begin(pnl);
+
+            if (Storyboard.Contains("Show"))
+            {
+                btnHide.Visibility = System.Windows.Visibility.Visible;
+                btnShow.Visibility = System.Windows.Visibility.Hidden;
+                pnlLeftMenu.SetValue(Grid.ColumnSpanProperty, 5);
+                pnlLeftMenu.Margin = new Thickness(0, 0, 0, 0);
+            }
+            else if (Storyboard.Contains("Hide"))
+            {
+                btnHide.Visibility = System.Windows.Visibility.Hidden;
+                btnShow.Visibility = System.Windows.Visibility.Visible;
+                pnlLeftMenu.SetValue(Grid.ColumnSpanProperty, 1);
             }
         }
     }
