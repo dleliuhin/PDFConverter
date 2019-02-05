@@ -33,10 +33,17 @@ namespace PDFConverter
      */
     public partial class ModeToggleButton : UserControl
     {
-        Thickness LeftSide = new Thickness(-39, 0, 0, 0);
-        Thickness RigftSide = new Thickness(0, 0, -39, 0);
+        Thickness LeftSide = new Thickness(-60, 0, 0, 0);
+        Thickness RigftSide = new Thickness(0, 0, -60, 0);
         SolidColorBrush Single = new SolidColorBrush(Color.FromRgb(160, 160, 160));
         SolidColorBrush Multiple = new SolidColorBrush(Color.FromRgb(130, 190, 125));
+
+        HorizontalAlignment TextLeftSide = HorizontalAlignment.Left;
+        HorizontalAlignment TextRightSide = HorizontalAlignment.Right;
+        private String defaultText = "Single";
+        private String rightText = "Multi";
+
+        int fontSize = 18;
 
         private bool toggled = false;
 
@@ -46,6 +53,10 @@ namespace PDFConverter
             Back.Fill = Single;
             toggled = false;
             Dot.Margin = LeftSide;
+            textMode.HorizontalAlignment = TextRightSide;
+            textMode.Text = defaultText;
+            textMode.Margin = new Thickness(0, 0, 12, 0);
+            textMode.FontSize = fontSize;
         }
 
         public bool Toggled
@@ -56,17 +67,25 @@ namespace PDFConverter
 
         private void Dot_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if(!toggled)
+            if (!toggled)
             {
                 Back.Fill = Multiple;
                 toggled = true;
                 Dot.Margin = RigftSide;
+                textMode.HorizontalAlignment = TextLeftSide;
+                textMode.Text = rightText;
+                textMode.Margin = new Thickness(12, 0, 0, 0);
+                textMode.FontSize = fontSize;
             }
             else
             {
                 Back.Fill = Single;
                 toggled = false;
                 Dot.Margin = LeftSide;
+                textMode.HorizontalAlignment = TextRightSide;
+                textMode.Text = defaultText;
+                textMode.Margin = new Thickness(0, 0, 12, 0);
+                textMode.FontSize = fontSize;
             }
         }
     }
