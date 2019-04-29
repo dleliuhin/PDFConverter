@@ -37,11 +37,16 @@ namespace PDFConverter
      */
     public partial class MainWindow : Window
     {
-
         public MainWindow()
         {
             InitializeComponent();
 
+            ConvertDemo();
+            
+        }
+
+        public static void ConvertDemo()
+        {
             var projectDirectory = Environment.CurrentDirectory;
             var exportFolder = System.IO.Directory.GetParent(projectDirectory).Parent.FullName;
             var exportFile = System.IO.Path.Combine(exportFolder, "Demo.pdf");
@@ -54,6 +59,10 @@ namespace PDFConverter
                     doc.Add(new iText.Layout.Element.Paragraph("Team Foxcatcher"));
                 }
             }
+
+            FoldersTreeView foldersTreeView = new FoldersTreeView();
+
+            string curPath = foldersTreeView.getFullPath();
         }
 
         private void btnLeftMenuHide_Click(object sender, RoutedEventArgs e)

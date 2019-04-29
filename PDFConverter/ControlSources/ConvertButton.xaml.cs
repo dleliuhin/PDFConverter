@@ -36,6 +36,8 @@ namespace PDFConverter
         public ConvertButton()
         {
             InitializeComponent();
+
+            this.convertButton.Height = 80;
         }
     }
 }

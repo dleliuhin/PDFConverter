@@ -35,6 +35,17 @@ namespace PDFConverter
             InitializeComponent();
         }
 
+        public static string fullPath;
+
+        public string getFullPath()
+        {
+            string res = string.Empty;
+
+            res = fullPath;
+
+            return res;
+        }
+
         #endregion
 
         #region On Loaded
@@ -45,6 +56,11 @@ namespace PDFConverter
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.LoadTreeView();
+        }
+
+        private void LoadTreeView()
         {
             // Get every logical drive on the machine
             foreach (var drive in Directory.GetLogicalDrives())
@@ -92,7 +108,11 @@ namespace PDFConverter
             item.Items.Clear();
 
             // Get full path
-            var fullPath = (string)item.Tag;
+            fullPath = (string)item.Tag;
+
+            PDFConverter.FileListView fileListView = new FileListView();
+
+            fileListView.CurPath = fullPath;
 
             #endregion
 

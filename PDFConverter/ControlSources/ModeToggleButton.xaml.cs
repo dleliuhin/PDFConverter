@@ -50,6 +50,7 @@ namespace PDFConverter
         public ModeToggleButton()
         {
             InitializeComponent();
+
             Back.Fill = Single;
             toggled = false;
             Dot.Margin = LeftSide;

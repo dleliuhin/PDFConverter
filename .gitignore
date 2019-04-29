@@ -6,7 +6,7 @@ WinFormsPDFConverter/
 
 # PDFConverter project Doc folder
 Documentation/
-Demo.pdf
+*.pdf
 
 # User-specific files
 *.rsuser
